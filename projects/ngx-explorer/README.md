@@ -1,4 +1,6 @@
-# ngx-explorer
+# angular-simple-file-explorer
+Fork from ngx-explorer. I have created this fork to extend the properties of the file manager and adapt it to the project that I am developing in Supabase.
+
 Lightweight and easy-to-use Angular File Explorer module.
 This is a front-end implementation only. There are no services at this point.
 

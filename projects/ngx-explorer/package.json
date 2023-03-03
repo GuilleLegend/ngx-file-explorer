@@ -1,6 +1,9 @@
 {
-  "name": "ngx-explorer",
-  "version": "1.3.0",
+  "name": "angular-simple-file-explorer",
+  "version": "1.3.4",
+  "scripts": {
+    "build": "tsc"
+  },
   "peerDependencies": {
     "@angular/common": ">= 10.0.0",
     "@angular/core": ">= 10.0.0",
@@ -11,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/artemnih/ngx-explorer.git"
+    "url": "https://github.com/GuilleLegend/ngx-file-explorer.git"
   },
   "author": "@artemnih",
   "license": "MIT",
-  "description": "Angular library that provides simple file manager.",
+  "description": "Simple File Explorer for Angular",
   "bugs": {
-    "url": "https://github.com/artemnih/ngx-explorer/issues"
+    "url": "https://github.com/GuilleLegend/ngx-file-explorer/issues"
   },
   "keywords": [
     "angular",
@@ -27,7 +30,8 @@
     "explorer",
     "manager",
     "storage",
-    "files"
+    "files",
+    "supabase"
   ],
   "main": "bundles/ngx-explorer.umd.js",
   "module": "fesm2015/ngx-explorer.js",
