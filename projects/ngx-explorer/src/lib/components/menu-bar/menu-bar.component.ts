@@ -16,6 +16,8 @@ export class MenuBarComponent implements OnDestroy {
     canDownload = false;
     canDelete = false;
     canRename = false;
+    canOpen = false;
+    canShare = false;
 
     private sub = new Subscription();
     private selection: INode[] = [];
@@ -25,8 +27,18 @@ export class MenuBarComponent implements OnDestroy {
             this.selection = n;
             this.canDownload = n.filter(x => x.isLeaf).length === 1;
             this.canDelete = n.length > 0;
+            this.canOpen = n.filter(x => x.isLeaf).length === 1;
+            this.canShare = n.filter(x => x.isLeaf).length === 1;
             this.canRename = n.length === 1;
         }));
+    }
+
+    open(){
+        this.explorerService.open();
+    }
+
+    share(){
+        this.explorerService.share();
     }
 
     createFolder() {

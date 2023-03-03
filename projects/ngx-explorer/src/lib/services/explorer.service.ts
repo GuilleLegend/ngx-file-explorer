@@ -108,6 +108,20 @@ export class ExplorerService {
         });
     }
 
+    public open() {
+        const target = this.selectedNodes$.value[0];
+        this.dataService.open(target.data).subscribe(() => {
+            this.refresh();
+        })
+    }
+
+    public share() {
+        const target = this.selectedNodes$.value[0];
+        this.dataService.share(target.data).subscribe(() => {
+            this.refresh();
+        })
+    }
+
     private getNodeChildren(id: number) {
         const parent = this.flatPointers[id];
         if (parent.isLeaf) {

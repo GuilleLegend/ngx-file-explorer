@@ -33,6 +33,7 @@ interface ExampleNode {
 }
 
 export class ExampleDataService implements IDataService<ExampleNode> {
+
   private id = 0;
   private folderId = 20;
 
@@ -79,6 +80,18 @@ export class ExampleDataService implements IDataService<ExampleNode> {
     return forkJoin(results);
   }
 
+  open(node: ExampleNode): Observable<any> {
+    console.log(node.name);
+    const n = new Observable<any>()
+    return n;
+  }
+
+  share(node: ExampleNode): Observable<any> {
+    console.log(node.name);
+    const n = new Observable<any>()
+    return n;
+  }
+  
   deleteNodes(nodes: ExampleNode[]): Observable<any> {
     const results = nodes.map(node => {
       const path = node.path + '/';

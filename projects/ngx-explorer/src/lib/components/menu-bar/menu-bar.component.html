@@ -6,6 +6,8 @@
         <button class="nxe-menu-bar-button" [hidden]="!canDownload" (click)="download()"><i class="nxe-download" aria-hidden="true"></i> Download</button>
         <button class="nxe-menu-bar-button" [hidden]="!canRename" (click)="rename()"><i class="nxe-edit" aria-hidden="true"></i> Rename</button>
         <button class="nxe-menu-bar-button" [hidden]="!canDelete" (click)="remove()"><i class="nxe-trash-empty" aria-hidden="true"></i> Delete</button>
+        <button class="nxe-menu-bar-button" [hidden]="!canOpen" (click)="open()"><i class="nxe-open" aria-hidden="true"></i> Open</button>
+        <button class="nxe-menu-bar-button" [hidden]="!canShare" (click)="share()"><i class="nxe-open" aria-hidden="true"></i> Share</button>
     </div>
 
     <div class="nxe-menu-bar-right">
