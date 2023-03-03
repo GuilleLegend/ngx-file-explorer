@@ -1,4 +1,4 @@
-# ngx-explorer
+# File Explorer for Angular
 Lightweight and easy-to-use Angular File Explorer module.
 This is a front-end implementation only. There are no services at this point.
 
