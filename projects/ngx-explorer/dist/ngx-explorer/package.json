@@ -1,6 +1,6 @@
 {
   "name": "explorer-app",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "build": "tsc --project tsconfig.lib.json"
   },
@@ -43,10 +43,6 @@
   "fesm2015": "fesm2015/ngx-explorer.js",
   "typings": "ngx-explorer.d.ts",
   "metadata": "ngx-explorer.metadata.json",
-  "sideEffects": false,
-  "devDependencies": {
-    "@types/jasmine": "^4.3.1",
-    "@types/jest": "^29.4.0",
-    "jasmine": "^4.5.0"
-  }
+  "sideEffects": false
+  
 }
