@@ -1,7 +1,9 @@
 {
-  "name": "explorer-app",
-  "version": "0.0.4",
+  "name": "artemis-file-explorer-component",
+  "version": "0.0.7",
   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
     "build": "tsc --project tsconfig.lib.json"
   },
   "peerDependencies": {
@@ -19,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/GuilleLegend/ngx-file-explorer.git"
   },
-  "author": "@artemnih",
+  "author": "@agilmoy, @GuilleLegend",
   "license": "MIT",
   "description": "Simple File Explorer for Angular",
   "bugs": {

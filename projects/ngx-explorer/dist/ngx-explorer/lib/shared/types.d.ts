@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-export declare type NodeContent<T> = {
+export type NodeContent<T> = {
     leafs: T[];
     nodes: T[];
 };
@@ -22,6 +22,8 @@ export interface IDataService<T> {
     deleteLeafs(nodes: T[]): Observable<any>;
     uploadFiles(node: T, files: File[]): Observable<any>;
     download(node: T): Observable<any>;
+    open(node: T): Observable<any>;
+    share(node: T): Observable<any>;
 }
 export interface IHelperService {
     getName<T>(data: T): string;

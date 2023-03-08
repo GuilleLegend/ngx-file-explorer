@@ -8,9 +8,13 @@ export declare class MenuBarComponent implements OnDestroy {
     canDownload: boolean;
     canDelete: boolean;
     canRename: boolean;
+    canOpen: boolean;
+    canShare: boolean;
     private sub;
     private selection;
     constructor(explorerService: ExplorerService, helperService: HelperService);
+    open(): void;
+    share(): void;
     createFolder(): void;
     refresh(): void;
     rename(): void;

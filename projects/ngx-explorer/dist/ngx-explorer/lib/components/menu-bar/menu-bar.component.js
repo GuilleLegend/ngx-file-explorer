@@ -1,28 +1,17 @@
-import { Component, ElementRef, OnDestroy, ViewChild, ViewEncapsulation } from '@angular/core';
+import { __decorate } from "tslib";
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { INode } from '../../shared/types';
-import { ExplorerService } from '../../services/explorer.service';
-import { HelperService } from '../../services/helper.service';
-
-@Component({
-    selector: 'nxe-menu-artemis',
-    templateUrl: './menu-artemis.component.html',
-    styleUrls: ['./menu-bar.component.scss'],
-    encapsulation: ViewEncapsulation.None
-})
-export class MenuBarComponent implements OnDestroy {
-    @ViewChild('uploader', { static: true }) uploader: ElementRef;
-
-    canDownload = false;
-    canDelete = false;
-    canRename = false;
-    canOpen = false;
-    canShare = false;
-
-    private sub = new Subscription();
-    private selection: INode[] = [];
-
-    constructor(private explorerService: ExplorerService, private helperService: HelperService) {
+let MenuBarComponent = class MenuBarComponent {
+    constructor(explorerService, helperService) {
+        this.explorerService = explorerService;
+        this.helperService = helperService;
+        this.canDownload = false;
+        this.canDelete = false;
+        this.canRename = false;
+        this.canOpen = false;
+        this.canShare = false;
+        this.sub = new Subscription();
+        this.selection = [];
         this.sub.add(this.explorerService.selectedNodes.subscribe(n => {
             this.selection = n;
             this.canDownload = n.filter(x => x.isLeaf).length === 1;
@@ -32,26 +21,21 @@ export class MenuBarComponent implements OnDestroy {
             this.canRename = n.length === 1;
         }));
     }
-
-    open(){
+    open() {
         this.explorerService.open();
     }
-
-    share(){
+    share() {
         this.explorerService.share();
     }
-
     createFolder() {
         const name = prompt('Enter new folder name');
         if (name) {
             this.explorerService.createNode(name);
         }
     }
-
     refresh() {
         this.explorerService.refresh();
     }
-
     rename() {
         if (this.selection.length === 1) {
             const oldName = this.helperService.getName(this.selection[0].data);
@@ -61,28 +45,35 @@ export class MenuBarComponent implements OnDestroy {
             }
         }
     }
-
     remove() {
         if (confirm('Are you sure you want to delete the selected files?')) {
             this.explorerService.remove();
         }
     }
-
     openUploader() {
         this.uploader.nativeElement.click();
     }
-
-    handleFiles(files: File[]) {
+    handleFiles(files) {
         this.explorerService.upload(files);
         this.uploader.nativeElement.value = '';
     }
-
     download() {
         this.explorerService.download();
     }
-
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
-
-}
+};
+__decorate([
+    ViewChild('uploader', { static: true })
+], MenuBarComponent.prototype, "uploader", void 0);
+MenuBarComponent = __decorate([
+    Component({
+        selector: 'nxe-menu-bar',
+        templateUrl: './menu-bar.component.html',
+        styleUrls: ['./menu-bar.component.scss'],
+        encapsulation: ViewEncapsulation.None
+    })
+], MenuBarComponent);
+export { MenuBarComponent };
+//# sourceMappingURL=menu-bar.component.js.map

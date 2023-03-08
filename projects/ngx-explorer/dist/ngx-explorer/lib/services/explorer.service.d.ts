@@ -22,5 +22,7 @@ export declare class ExplorerService {
     remove(): void;
     upload(files: File[]): void;
     download(): void;
+    open(): void;
+    share(): void;
     private getNodeChildren;
 }
