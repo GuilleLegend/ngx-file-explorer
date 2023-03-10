@@ -1,6 +1,6 @@
 {
-  "name": "artemis-file-explorer-component",
-  "version": "0.0.7",
+  "name": "artemis-file-explorer-things",
+  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -39,10 +39,10 @@
     "supabase"
   ],
   "main": "bundles/ngx-explorer.umd.js",
-  "module": "fesm2015/ngx-explorer.js",
-  "es2015": "fesm2015/ngx-explorer.js",
+  "module": "esm2015/ngx-explorer.js",
+  "es2015": "esm2015/ngx-explorer.js",
   "esm2015": "esm2015/ngx-explorer.js",
-  "fesm2015": "fesm2015/ngx-explorer.js",
+  "fesm2015": "esm2015/ngx-explorer.js",
   "typings": "ngx-explorer.d.ts",
   "metadata": "ngx-explorer.metadata.json",
   "sideEffects": false

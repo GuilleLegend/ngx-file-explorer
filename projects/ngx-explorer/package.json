@@ -37,10 +37,10 @@
     "supabase"
   ],
   "main": "bundles/ngx-explorer.umd.js",
-  "module": "fesm2015/ngx-explorer.js",
-  "es2015": "fesm2015/ngx-explorer.js",
+  "module": "esm2015/ngx-explorer.js",
+  "es2015": "esm2015/ngx-explorer.js",
   "esm2015": "esm2015/ngx-explorer.js",
-  "fesm2015": "fesm2015/ngx-explorer.js",
+  "fesm2015": "esm2015/ngx-explorer.js",
   "typings": "ngx-explorer.d.ts",
   "metadata": "ngx-explorer.metadata.json",
   "sideEffects": false,

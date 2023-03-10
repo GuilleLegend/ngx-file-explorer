@@ -90,6 +90,21 @@ export class ExplorerService {
             this.refresh();
         });
     }
+
+    open() {
+        const target = this.selectedNodes$.value[0];
+        this.dataService.open(target.data).subscribe(() => {
+            this.refresh();
+        })
+    }
+
+    share() {
+        const target = this.selectedNodes$.value[0];
+        this.dataService.share(target.data).subscribe(() => {
+            this.refresh();
+        })
+    }
+
     getNodeChildren(id) {
         const parent = this.flatPointers[id];
         if (parent.isLeaf) {
