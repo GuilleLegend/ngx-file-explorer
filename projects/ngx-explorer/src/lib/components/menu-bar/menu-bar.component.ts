@@ -49,6 +49,7 @@ export class MenuBarComponent implements OnDestroy {
     }
 
     refresh() {
+        this.explorerService.refreshDocs();
         this.explorerService.refresh();
     }
 

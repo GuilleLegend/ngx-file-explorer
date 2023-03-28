@@ -91,6 +91,10 @@ export class ExampleDataService implements IDataService<ExampleNode> {
     const n = new Observable<any>()
     return n;
   }
+
+  refresh() {
+    console.log('EZ');
+  }
   
   deleteNodes(nodes: ExampleNode[]): Observable<any> {
     const results = nodes.map(node => {

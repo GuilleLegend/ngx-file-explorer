@@ -25,6 +25,7 @@ export interface IDataService<T> {
     download(node: T): Observable<any>;
     open(node: T): Observable<any>;
     share(node: T): Observable<any>;
+    refresh();
 }
 
 export interface IHelperService {
