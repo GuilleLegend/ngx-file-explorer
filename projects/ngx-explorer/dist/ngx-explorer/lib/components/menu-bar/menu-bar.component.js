@@ -70,7 +70,7 @@ __decorate([
 MenuBarComponent = __decorate([
     Component({
         selector: 'nxe-menu-bar',
-        templateUrl: './menu-bar.component.html',
+        templateUrl: './menu-artemis.component.html',
         styleUrls: ['./menu-bar.component.scss'],
         encapsulation: ViewEncapsulation.None
     })

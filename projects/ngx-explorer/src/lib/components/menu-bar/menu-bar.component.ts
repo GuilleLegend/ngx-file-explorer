@@ -5,7 +5,7 @@ import { ExplorerService } from '../../services/explorer.service';
 import { HelperService } from '../../services/helper.service';
 
 @Component({
-    selector: 'nxe-menu-artemis',
+    selector: 'nxe-menu-bar',
     templateUrl: './menu-artemis.component.html',
     styleUrls: ['./menu-bar.component.scss'],
     encapsulation: ViewEncapsulation.None
