@@ -25,7 +25,6 @@ export class IconsComponent extends BaseView {
 
     openner(event: MouseEvent, item: INode) {
         if (item.isLeaf) {
-            console.log('isLeaf')
             this.openLeaf(event, item);
         } else {
             this.open(event, item);

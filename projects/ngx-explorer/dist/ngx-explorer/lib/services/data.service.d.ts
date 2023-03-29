@@ -8,6 +8,7 @@ export declare abstract class DataService implements IDataService<any> {
     abstract deleteLeafs(nodes: any[]): any;
     abstract uploadFiles(node: any, files: File[]): any;
     abstract download(node: any): any;
+    abstract openLeaf(node: any): any;
     abstract open(node: any): any;
     abstract share(node: any): any;
 }

@@ -10,6 +10,15 @@ let IconsComponent = class IconsComponent extends BaseView {
             leaf: 'nxe-doc',
         };
     }
+    openner(event, item) {
+        if (item.isLeaf) {
+            console.log('isLeaf');
+            this.openLeaf(event, item);
+        }
+        else {
+            this.open(event, item);
+        }
+    }
 };
 IconsComponent = __decorate([
     Component({

@@ -50,6 +50,12 @@ export class BaseView {
             this.explorerService.openNode(item.id);
         }
     }
+    openLeaf(event, item) {
+        const metaKeyPressed = event.metaKey || event.ctrlKey || event.shiftKey;
+        if (!metaKeyPressed) {
+            this.explorerService.openLeaf(item);
+        }
+    }
     isSelected(item) {
         return this.selection.indexOf(item) !== -1;
     }

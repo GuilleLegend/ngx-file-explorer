@@ -97,6 +97,11 @@ export class ExplorerService {
             this.refresh();
         })
     }
+    openLeaf(target) {
+        this.dataService.open(target.data).subscribe(() => {
+            this.refresh();
+        })
+    }
 
     share() {
         const target = this.selectedNodes$.value[0];

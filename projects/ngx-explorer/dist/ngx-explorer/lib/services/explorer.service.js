@@ -30,6 +30,11 @@ let ExplorerService = class ExplorerService {
             this.selectedNodes$.next([]);
         });
     }
+    openLeaf(target) {
+        this.dataService.open(target.data).subscribe(() => {
+            this.refresh();
+        });
+    }
     expandNode(id) {
         this.getNodeChildren(id).subscribe();
     }

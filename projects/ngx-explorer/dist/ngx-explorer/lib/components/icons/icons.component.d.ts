@@ -1,3 +1,4 @@
+import { INode } from 'ngx-explorer';
 import { BehaviorSubject } from 'rxjs';
 import { ExplorerService } from '../../services/explorer.service';
 import { HelperService } from '../../services/helper.service';
@@ -8,4 +9,5 @@ export declare class IconsComponent extends BaseView {
         leaf: string;
     };
     constructor(explorerService: ExplorerService, helperService: HelperService, filter: BehaviorSubject<string>);
+    openner(event: MouseEvent, item: INode): void;
 }
