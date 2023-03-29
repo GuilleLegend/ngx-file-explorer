@@ -1,6 +1,6 @@
 {
-  "name": "artemis-file-explorer-things",
-  "version": "0.0.5",
+  "name": "artemis-code-file-manager",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

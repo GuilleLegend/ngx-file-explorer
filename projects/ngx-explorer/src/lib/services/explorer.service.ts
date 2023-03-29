@@ -113,12 +113,7 @@ export class ExplorerService {
         this.dataService.open(target.data).subscribe(() => {
             this.refresh();
         })
-    }
-
-    public refreshDocs() {        
-        this.dataService.refresh();
-    }
-    
+    }    
 
     public share() {
         const target = this.selectedNodes$.value[0];
