@@ -1,4 +1,5 @@
 import { Component, Inject, ViewEncapsulation } from '@angular/core';
+import { INode } from 'ngx-explorer';
 import { BehaviorSubject } from 'rxjs';
 import { FILTER_STRING } from '../../injection-tokens/tokens';
 import { ExplorerService } from '../../services/explorer.service';
@@ -22,4 +23,12 @@ export class IconsComponent extends BaseView {
         super(explorerService, helperService, filter);
     }
 
+    openner(event: MouseEvent, item: INode) {
+        if (item.isLeaf) {
+            console.log('isLeaf')
+            this.openLeaf(event, item);
+        } else {
+            this.open(event, item);
+        }
+    }
 }

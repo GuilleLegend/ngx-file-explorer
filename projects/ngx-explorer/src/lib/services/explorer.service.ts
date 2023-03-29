@@ -40,6 +40,12 @@ export class ExplorerService {
         });
     }
 
+    public openLeaf(target: INode) {
+        this.dataService.open(target.data).subscribe(() => {
+            this.refresh();
+        })
+    }
+
     public expandNode(id: number) {
         this.getNodeChildren(id).subscribe();
     }
