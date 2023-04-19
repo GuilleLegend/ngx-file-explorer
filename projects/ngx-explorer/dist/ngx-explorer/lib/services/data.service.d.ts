@@ -11,4 +11,5 @@ export declare abstract class DataService implements IDataService<any> {
     abstract openLeaf(node: any): any;
     abstract open(node: any): any;
     abstract share(node: any): any;
+    abstract dbClick(node: any): any;
 }

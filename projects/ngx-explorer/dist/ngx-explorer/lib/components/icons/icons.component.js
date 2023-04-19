@@ -12,12 +12,14 @@ let IconsComponent = class IconsComponent extends BaseView {
     }
     openner(event, item) {
         if (item.isLeaf) {
-            console.log('isLeaf');
             this.openLeaf(event, item);
         }
         else {
             this.open(event, item);
         }
+    }
+    doubleClick(item) {
+        this.dbClick(item);
     }
 };
 IconsComponent = __decorate([

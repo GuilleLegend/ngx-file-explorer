@@ -49,6 +49,9 @@ let BaseView = class BaseView {
             this.explorerService.openNode(item.id);
         }
     }
+    dbClick(item) {
+        this.explorerService.dbClick(item);
+    }
     openLeaf(event, item) {
         const metaKeyPressed = event.metaKey || event.ctrlKey || event.shiftKey;
         if (!metaKeyPressed) {

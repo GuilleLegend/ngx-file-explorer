@@ -44,6 +44,9 @@ export class ExplorerService {
     refresh() {
         this.openNode(this.openedNode$.value.id);
     }
+    dbClick(target) {
+        this.dataService.dbClick(target);
+    }
     rename(name) {
         const nodes = this.selectedNodes$.value;
         if (nodes.length > 1) {

@@ -57,7 +57,7 @@ export class BaseView implements OnDestroy {
         }
     }
 
-    dbClick(event: MouseEvent, item: INode) {
+    dbClick(item: INode) {
         this.explorerService.dbClick(item);
     }
 

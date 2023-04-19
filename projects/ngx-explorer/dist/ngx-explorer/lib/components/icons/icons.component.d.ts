@@ -10,4 +10,5 @@ export declare class IconsComponent extends BaseView {
     };
     constructor(explorerService: ExplorerService, helperService: HelperService, filter: BehaviorSubject<string>);
     openner(event: MouseEvent, item: INode): void;
+    doubleClick(item: INode): void;
 }

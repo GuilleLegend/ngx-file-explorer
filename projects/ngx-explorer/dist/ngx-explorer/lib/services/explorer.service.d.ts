@@ -15,6 +15,7 @@ export declare class ExplorerService {
     constructor(dataService: DataService);
     selectNodes(nodes: INode[]): void;
     openNode(id: number): void;
+    dbClick(target: INode): void;
     openLeaf(target: INode): void;
     expandNode(id: number): void;
     createNode(name: string): void;

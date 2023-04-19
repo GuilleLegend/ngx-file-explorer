@@ -16,6 +16,7 @@ export declare class BaseView implements OnDestroy {
     getDisplayName(data: any): string;
     select(event: MouseEvent, item: INode): void;
     open(event: MouseEvent, item: INode): void;
+    dbClick(item: INode): void;
     openLeaf(event: MouseEvent, item: INode): void;
     isSelected(item: INode): boolean;
     emptySpaceClick(): void;
