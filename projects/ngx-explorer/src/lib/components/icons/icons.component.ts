@@ -30,4 +30,8 @@ export class IconsComponent extends BaseView {
             this.open(event, item);
         }
     }
+
+    doubleClick(event: MouseEvent, item: INode){
+        console.log(item)
+    }
 }
