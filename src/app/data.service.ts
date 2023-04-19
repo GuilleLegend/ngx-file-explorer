@@ -37,6 +37,11 @@ export class ExampleDataService implements IDataService<ExampleNode> {
   private id = 0;
   private folderId = 20;
 
+  dbClick(node: ExampleNode): Observable<any> {
+    console.log(node);
+    return of({});
+  }
+
   download(node: ExampleNode): Observable<any> {
     const file = MOCK_FILES.find(f => f.id === node.id);
 
@@ -95,7 +100,7 @@ export class ExampleDataService implements IDataService<ExampleNode> {
   refresh() {
     console.log('EZ');
   }
-  
+
   deleteNodes(nodes: ExampleNode[]): Observable<any> {
     const results = nodes.map(node => {
       const path = node.path + '/';
