@@ -34,4 +34,8 @@ export class IconsComponent extends BaseView {
     doubleClick(item: INode){        
         this.dbClick(item);
     }
+
+    select(event: MouseEvent, item: INode) {
+        this.dbSelect(event, item)
+    }
 }

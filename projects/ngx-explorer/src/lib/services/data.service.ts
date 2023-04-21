@@ -17,6 +17,7 @@ export abstract class DataService implements IDataService<any> {
     abstract open(node:any);
     abstract share(node:any);
     abstract dbClick(node:any);
+    abstract dbSelect(node:any);
     // move(from to) // TODO: on/off in settings
     // copyPaste(from to) // TODO: on/off in settings
     // cutPaste(from to) // TODO: on/off in settings

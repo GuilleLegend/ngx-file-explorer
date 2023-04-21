@@ -47,6 +47,9 @@ export class ExplorerService {
     dbClick(target) {
         this.dataService.dbClick(target);
     }
+    dbSelect(target){
+        this.dataService.dbSelect(target);
+    }
     rename(name) {
         const nodes = this.selectedNodes$.value;
         if (nodes.length > 1) {

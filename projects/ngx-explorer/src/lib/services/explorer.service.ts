@@ -44,6 +44,10 @@ export class ExplorerService {
         this.dataService.dbClick(target);
     }
 
+    public dbSelect(target: INode){
+        this.dataService.dbSelect(target);
+    }
+
     public openLeaf(target: INode) {
         this.dataService.open(target.data).subscribe(() => {
             this.refresh();
