@@ -22,7 +22,8 @@ let IconsComponent = class IconsComponent extends BaseView {
         this.dbClick(item);
     }
     select(event, item) {
-        this.dbSelect(event, item);
+        super.select(event, item);
+        this.dbSelect(item);
     }
 };
 IconsComponent = __decorate([

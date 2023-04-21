@@ -61,7 +61,7 @@ export class BaseView implements OnDestroy {
         this.explorerService.dbClick(item);
     }
 
-    dbSelect(event:MouseEvent, item: INode) {
+    dbSelect(item: INode) {
         this.explorerService.dbSelect(item);
     }
 

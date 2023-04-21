@@ -52,7 +52,7 @@ let BaseView = class BaseView {
     dbClick(item) {
         this.explorerService.dbClick(item);
     }
-    dbSelect(event, item) {
+    dbSelect(item) {
         this.explorerService.dbSelect(item);
     }
     openLeaf(event, item) {
