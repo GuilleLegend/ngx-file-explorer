@@ -51,7 +51,7 @@ export class ExplorerService {
         this.dataService.leftClick(target);
     }
     emptyClick(){
-        this.explorerService.emptyClick();
+        this.dataService.emptyClick();
     }
     rename(name) {
         const nodes = this.selectedNodes$.value;
