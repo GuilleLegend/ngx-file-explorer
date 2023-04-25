@@ -25,6 +25,10 @@ let IconsComponent = class IconsComponent extends BaseView {
         super.select(event, item);
         this.dbSelect(item);
     }
+    emptySpaceClick() {
+        super.emptySpaceClick();
+        this.emptyClick();
+    }
 };
 IconsComponent = __decorate([
     Component({

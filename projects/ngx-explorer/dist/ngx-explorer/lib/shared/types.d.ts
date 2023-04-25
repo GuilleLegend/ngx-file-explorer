@@ -24,7 +24,9 @@ export interface IDataService<T> {
     download(node: T): Observable<any>;
     open(node: T): Observable<any>;
     share(node: T): Observable<any>;
-    dbClick(node: T): Observable<any>;
+    rightClick(node: T): Observable<any>;
+    leftClick(node: T): Observable<any>;
+    emptyClick(): any;
 }
 export interface IHelperService {
     getName<T>(data: T): string;

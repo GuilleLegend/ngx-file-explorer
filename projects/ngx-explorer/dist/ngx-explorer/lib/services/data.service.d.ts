@@ -1,5 +1,7 @@
 import { IDataService } from '../shared/types';
+import { Observable } from 'rxjs';
 export declare abstract class DataService implements IDataService<any> {
+    dbClick(node: any): Observable<any>;
     abstract getNodeChildren(node: any): any;
     abstract createNode(parentNode: any, name: any): any;
     abstract renameNode(node: any, newName: string): any;
@@ -11,6 +13,7 @@ export declare abstract class DataService implements IDataService<any> {
     abstract openLeaf(node: any): any;
     abstract open(node: any): any;
     abstract share(node: any): any;
-    abstract dbClick(node: any): any;
-    abstract dbSelect(node: any): any;
+    abstract rightClick(node: any): any;
+    abstract leftClick(node: any): any;
+    abstract emptyClick(): any;
 }

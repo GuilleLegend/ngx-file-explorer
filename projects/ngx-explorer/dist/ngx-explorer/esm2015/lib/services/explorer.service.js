@@ -45,10 +45,13 @@ export class ExplorerService {
         this.openNode(this.openedNode$.value.id);
     }
     dbClick(target) {
-        this.dataService.dbClick(target);
+        this.dataService.rightClick(target);
     }
     dbSelect(target){
-        this.dataService.dbSelect(target);
+        this.dataService.leftClick(target);
+    }
+    emptyClick(){
+        this.explorerService.emptyClick();
     }
     rename(name) {
         const nodes = this.selectedNodes$.value;

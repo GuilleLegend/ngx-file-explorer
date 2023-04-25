@@ -17,6 +17,7 @@ export declare class ExplorerService {
     openNode(id: number): void;
     dbClick(target: INode): void;
     dbSelect(target: INode): void;
+    emptyClick(): void;
     openLeaf(target: INode): void;
     expandNode(id: number): void;
     createNode(name: string): void;

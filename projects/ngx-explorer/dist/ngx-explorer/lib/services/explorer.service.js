@@ -31,10 +31,13 @@ let ExplorerService = class ExplorerService {
         });
     }
     dbClick(target) {
-        this.dataService.dbClick(target);
+        this.dataService.rightClick(target);
     }
     dbSelect(target) {
-        this.dataService.dbSelect(target);
+        this.dataService.leftClick(target);
+    }
+    emptyClick() {
+        this.dataService.emptyClick();
     }
     openLeaf(target) {
         this.dataService.open(target.data).subscribe(() => {

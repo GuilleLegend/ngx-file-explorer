@@ -12,4 +12,5 @@ export declare class IconsComponent extends BaseView {
     openner(event: MouseEvent, item: INode): void;
     doubleClick(item: INode): void;
     select(event: MouseEvent, item: INode): void;
+    emptySpaceClick(): void;
 }
