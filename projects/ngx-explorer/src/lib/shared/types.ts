@@ -27,7 +27,7 @@ export interface IDataService<T> {
     share(node: T): Observable<any>;
     rightClick(node: T): Observable<any>;
     leftClick(node: T): Observable<any>;
-    emptyClick();
+    emptyClick(): Observable<any>;
 }
 
 export interface IHelperService {

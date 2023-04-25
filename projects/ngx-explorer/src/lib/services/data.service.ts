@@ -6,9 +6,6 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export abstract class DataService implements IDataService<any> {
-    dbClick(node: any): Observable<any> {
-        throw new Error('Method not implemented.');
-    }
     abstract getNodeChildren(node: any);
     abstract createNode(parentNode: any, name: any);
     abstract renameNode(node: any, newName: string);
