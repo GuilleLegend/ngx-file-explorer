@@ -39,4 +39,9 @@ export class IconsComponent extends BaseView {
         super.select(event, item)
         this.dbSelect(item)
     }
+
+    emptySpaceClick(){
+        super.emptySpaceClick()
+        this.emptyClick()
+    }
 }

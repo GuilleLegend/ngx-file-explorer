@@ -65,6 +65,10 @@ export class BaseView implements OnDestroy {
         this.explorerService.dbSelect(item);
     }
 
+    emptyClick(){
+        this.explorerService.emptyClick();
+    }
+
     openLeaf(event: MouseEvent, item: INode) {
         const metaKeyPressed = event.metaKey || event.ctrlKey || event.shiftKey;
         if (!metaKeyPressed) {

@@ -41,11 +41,15 @@ export class ExplorerService {
     }
 
     public dbClick(target: INode){
-        this.dataService.dbClick(target);
+        this.dataService.rightClick(target);
     }
 
     public dbSelect(target: INode){
-        this.dataService.dbSelect(target);
+        this.dataService.leftClick(target);
+    }
+
+    public emptyClick(){
+        this.dataService.emptyClick();
     }
 
     public openLeaf(target: INode) {

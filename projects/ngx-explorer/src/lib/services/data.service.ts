@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
 import { IDataService } from '../shared/types';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export abstract class DataService implements IDataService<any> {
+    dbClick(node: any): Observable<any> {
+        throw new Error('Method not implemented.');
+    }
     abstract getNodeChildren(node: any);
     abstract createNode(parentNode: any, name: any);
     abstract renameNode(node: any, newName: string);
@@ -16,8 +20,9 @@ export abstract class DataService implements IDataService<any> {
     abstract openLeaf(node:any);
     abstract open(node:any);
     abstract share(node:any);
-    abstract dbClick(node:any);
-    abstract dbSelect(node:any);
+    abstract rightClick(node:any);
+    abstract leftClick(node:any);
+    abstract emptyClick();
     // move(from to) // TODO: on/off in settings
     // copyPaste(from to) // TODO: on/off in settings
     // cutPaste(from to) // TODO: on/off in settings

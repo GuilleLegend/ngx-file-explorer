@@ -34,13 +34,23 @@ interface ExampleNode {
 
 export class ExampleDataService implements IDataService<ExampleNode> {
 
+
   private id = 0;
   private folderId = 20;
 
-  dbClick(node: ExampleNode): Observable<any> {
+  rightClick(node: ExampleNode): Observable<any> {
     console.log(node);
     return of({});
   }
+
+  leftClick(node: ExampleNode): Observable<any> {
+    console.log(node);
+    return of({});
+  }
+
+  emptyClick() {
+    console.log('Vacio');
+  }  
 
   download(node: ExampleNode): Observable<any> {
     const file = MOCK_FILES.find(f => f.id === node.id);
