@@ -50,6 +50,7 @@ export class ExampleDataService implements IDataService<ExampleNode> {
 
   emptyClick() {
     console.log('Vacio');
+    return of({});
   }  
 
   download(node: ExampleNode): Observable<any> {
