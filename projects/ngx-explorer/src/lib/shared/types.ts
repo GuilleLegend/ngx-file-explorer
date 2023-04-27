@@ -32,6 +32,9 @@ export interface IDataService<T> {
 
 export interface IHelperService {
     getName<T>(data: T): string;
+    getFileType<T>(data: T): string;
+    getLastModified<T>(data: T): string;
+    getSize<T>(data: T): string;
 }
 
 export enum AvialableView {

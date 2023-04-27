@@ -34,6 +34,18 @@ export class BaseView implements OnDestroy {
         return this.helperService.getName(data);
     }
 
+    getFileType(data: any): string {
+        return this.helperService.getFileType(data);
+    }
+
+    getLastModified(data: any): string {
+        return this.helperService.getLastModified(data);
+    }
+
+    getSize(data: any): string {
+        return this.helperService.getSize(data);
+    }
+
     select(event: MouseEvent, item: INode) {
         const selectedIndex = this.selection.findIndex(i => i === item);
         const alreadySelected = selectedIndex !== -1;
@@ -65,7 +77,7 @@ export class BaseView implements OnDestroy {
         this.explorerService.dbSelect(item);
     }
 
-    emptyClick(){
+    emptyClick() {
         this.explorerService.emptyClick();
     }
 
