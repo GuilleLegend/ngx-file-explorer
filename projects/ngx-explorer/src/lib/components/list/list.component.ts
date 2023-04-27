@@ -23,6 +23,18 @@ export class ListComponent extends BaseView {
     super(explorerService, helperService, filter);
   }
 
+  orderByName() {
+    this.items.sort((a, b) => a.data?.name.localeCompare(b.data?.name));
+  }
+
+  orderBySize() {
+    this.filteredItems.sort((a, b) => Number(this.getSize(a)) - Number(this.getSize(b)));
+  }
+
+  orderByDate() {
+    this.filteredItems.sort((a, b) => new Date(this.getLastModified(a)).getTime() - new Date(this.getLastModified(b)).getTime());
+  }
+
   openner(event: MouseEvent, item: INode) {
     if (item.isLeaf) {
       this.openLeaf(event, item);
