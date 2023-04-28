@@ -19,7 +19,7 @@
                         [ngClass]="{'nxe-list-row-selected':isSelected(item)}">
                         <td>
                             <span class="nxe-list-icon">
-                                <i [className]="item.isLeaf ? icons.leaf : icons.node"></i>
+                                <i [className]="getIcons(item)"></i>
                             </span>
                             {{ getDisplayName(item.data) }}
                         </td>

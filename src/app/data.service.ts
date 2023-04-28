@@ -16,8 +16,8 @@ let MOCK_FOLDERS = [
 ];
 
 let MOCK_FILES = [
-  { id: 428, name: 'notes.txt', path: '', content: 'hi, this is an example' },
-  { id: 4281, name: 'aaaaaa2.txt', path: '', content: 'hi, this is an example' },
+  { id: 428, name: 'PDF.txt', path: '', content: 'hi, this is an example', fileType: "application/pdf" },
+  { id: 4281, name: 'TXT.txt', path: '', content: 'hi, this is an example', fileType: "txt" },
   { id: 28, name: 'aaaaaThriller.txt', path: 'music/rock/thebeatles/thriller', content: 'hi, this is an example' },
   { id: 29, name: 'Back in the U.S.S.R.txt', path: 'music/rock/thebeatles', content: 'hi, this is an example' },
   { id: 30, name: 'All You Need Is Love.txt', path: 'music/rock/thebeatles', content: 'hi, this is an example' },

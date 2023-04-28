@@ -16,7 +16,19 @@ export class IconsComponent extends BaseView {
 
     public readonly icons = {
         node: 'nxe-folder',
-        leaf: 'nxe-doc',
+        leaf: 'txt',
+        pdf: 'pdf',
+        audio: 'audio',
+        code: 'code',
+        doc: 'doc',
+        exe: 'exe',
+        odp: 'odp',
+        img: 'photo',
+        pptx: 'pptx',
+        vector: 'vector',
+        video: 'video',
+        xlsx: 'xlsx',
+        zip: 'zip',
     };
 
     constructor(explorerService: ExplorerService, helperService: HelperService, @Inject(FILTER_STRING) filter: BehaviorSubject<string>) {
@@ -31,18 +43,53 @@ export class IconsComponent extends BaseView {
         }
     }
 
-    rightClick(event:MouseEvent, item: INode){    
-        super.select(event, item)    
+    rightClick(event: MouseEvent, item: INode) {
+        super.select(event, item)
         this.dbClick(item);
     }
 
-    select(event:MouseEvent, item: INode) {
+    select(event: MouseEvent, item: INode) {
         super.select(event, item)
         this.dbSelect(item)
     }
 
-    emptySpaceClick(){
+    emptySpaceClick() {
         super.emptySpaceClick()
         this.emptyClick()
     }
+
+    getIcons(item: any): string {
+        return item.isLeaf ? this.getIconByFileType(item.data) : this.icons.node;
+    }
+
+    getIconByFileType(data: any): string {
+        let fileType = this.getFileType(data)
+        const photoName = this.photoMap[fileType] || 'txt';
+        return photoName;
+    }
+
+    photoMap = {
+        'application/pdf': 'pdf',
+        'application/msword': 'doc',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'doc',
+        'application/vnd.oasis.opendocument.presentation': 'odp',
+        'application/vnd.oasis.opendocument.spreadsheet': 'ods',
+        'application/vnd.ms-powerpoint': 'pptx',
+        'application/vnd.openxmlformats-officedocument.presentationml.presentation': 'pptx',
+        'text/plain': 'txt',
+        'video/mp4': 'video',
+        'application/vnd.ms-excel': 'xlsx',
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
+        'image/jpeg': 'photo',
+        'image/png': 'photo',
+        'audio/x-ms-wma': 'audio',
+        'audio/mpeg': 'audio',
+        'audio/webm': 'audio.',
+        'audio/ogg': 'audio',
+        'audio/wav': 'audio',
+        'application/x-msdownload': 'exe',
+        'application/zip': 'zip',
+        'image/svg+xml': 'vector'
+      };
 }
+
