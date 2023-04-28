@@ -60,15 +60,15 @@ export class ListComponent extends BaseView {
 
   getIcons(item: any): string {
     return item.isLeaf ? this.getIconByFileType(item.data) : this.icons.node;
-}
+  }
 
-getIconByFileType(data: any): string {
+  getIconByFileType(data: any): string {
     let fileType = this.getFileType(data)
     const photoName = this.photoMap[fileType] || 'txt';
     return photoName;
-}
+  }
 
-photoMap = {
+  photoMap = {
     'application/pdf': 'pdf',
     'application/msword': 'doc',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'doc',

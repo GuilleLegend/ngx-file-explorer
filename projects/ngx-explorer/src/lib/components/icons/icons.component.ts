@@ -90,6 +90,6 @@ export class IconsComponent extends BaseView {
         'application/x-msdownload': 'exe',
         'application/zip': 'zip',
         'image/svg+xml': 'vector'
-      };
+    };
 }
 
