@@ -30,6 +30,7 @@ export class BreadcrumbsComponent implements OnDestroy {
 
     public click(crumb: Breadcrumb) {
         this.explorerService.openNode(crumb.node.id);
+        this.explorerService.getCurrentPath();
     }
 
     public ngOnDestroy() {

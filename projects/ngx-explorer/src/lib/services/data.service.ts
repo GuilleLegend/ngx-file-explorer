@@ -20,6 +20,7 @@ export abstract class DataService implements IDataService<any> {
     abstract rightClick(node:any);
     abstract leftClick(node:any);
     abstract emptyClick();
+    abstract getCurrentPath(path:string);
     // move(from to) // TODO: on/off in settings
     // copyPaste(from to) // TODO: on/off in settings
     // cutPaste(from to) // TODO: on/off in settings

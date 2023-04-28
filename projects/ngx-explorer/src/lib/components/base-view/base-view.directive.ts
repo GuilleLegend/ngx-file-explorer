@@ -66,6 +66,7 @@ export class BaseView implements OnDestroy {
         const metaKeyPressed = event.metaKey || event.ctrlKey || event.shiftKey;
         if (!metaKeyPressed) {
             this.explorerService.openNode(item.id);
+            this.explorerService.getCurrentPath();
         }
     }
 
@@ -79,6 +80,7 @@ export class BaseView implements OnDestroy {
 
     emptyClick() {
         this.explorerService.emptyClick();
+        this.explorerService.getCurrentPath();
     }
 
     openLeaf(event: MouseEvent, item: INode) {

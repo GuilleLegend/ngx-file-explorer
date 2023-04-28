@@ -34,22 +34,23 @@ interface ExampleNode {
 
 export class ExampleDataService implements IDataService<ExampleNode> {
 
-
   private id = 0;
   private folderId = 20;
 
+  getCurrentPath(path: string): Observable<any> {
+    console.log(path);
+    return of({});
+  }
+
   rightClick(node: ExampleNode): Observable<any> {
-    console.log(node);
     return of({});
   }
 
   leftClick(node: ExampleNode): Observable<any> {
-    console.log(node);
     return of({});
   }
 
   emptyClick() {
-    console.log('Vacio');
     return of({});
   }  
 

@@ -28,6 +28,7 @@ export interface IDataService<T> {
     rightClick(node: T): Observable<any>;
     leftClick(node: T): Observable<any>;
     emptyClick(): Observable<any>;
+    getCurrentPath(path: string): Observable<any>;
 }
 
 export interface IHelperService {

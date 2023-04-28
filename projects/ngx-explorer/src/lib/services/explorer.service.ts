@@ -40,15 +40,15 @@ export class ExplorerService {
         });
     }
 
-    public dbClick(target: INode){
+    public dbClick(target: INode) {
         this.dataService.rightClick(target);
     }
 
-    public dbSelect(target: INode){
+    public dbSelect(target: INode) {
         this.dataService.leftClick(target);
     }
 
-    public emptyClick(){
+    public emptyClick() {
         this.dataService.emptyClick();
     }
 
@@ -131,7 +131,7 @@ export class ExplorerService {
         this.dataService.open(target.data).subscribe(() => {
             this.refresh();
         })
-    }    
+    }
 
     public share() {
         const target = this.selectedNodes$.value[0];
@@ -175,4 +175,17 @@ export class ExplorerService {
             }));
     }
 
+    public getCurrentPath() {
+        let res = 'Home';
+        const path: any = this.openedNode;
+        if (path.source?._value?.data?.path != undefined) {
+            res = path.source._value.data.path;
+            this.dataService.getCurrentPath(res);
+            return;
+        } else {
+            res = 'Home';
+            this.dataService.getCurrentPath(res);
+            return;
+        }
+    }
 }
